@@ -46,16 +46,16 @@ namespace uploader
             }
             return credential;
         }
-        public Google.Apis.Drive.v3.Data.File UploadFile(string uploadFile, string description)
+        public Google.Apis.Drive.v3.Data.File UploadFile(string uploadFilePath, string description)
         {
-            if (File.Exists(uploadFile))
+            if (File.Exists(uploadFilePath))
             {
                 Google.Apis.Drive.v3.Data.File body = new Google.Apis.Drive.v3.Data.File();
-                string mimeType = GetMimeType(uploadFile);
-                body.Name = Path.GetFileName(uploadFile);
+                string mimeType = GetMimeType(uploadFilePath);
+                body.Name = Path.GetFileName(uploadFilePath);
                 body.Description = description;
                 body.MimeType = mimeType;
-                byte[] byteArray = System.IO.File.ReadAllBytes(uploadFile);
+                byte[] byteArray = System.IO.File.ReadAllBytes(uploadFilePath);
                 MemoryStream stream = new MemoryStream(byteArray);
                 try
                 {
@@ -77,9 +77,9 @@ namespace uploader
 
         }
 
-        private string GetMimeType(string fileName)
+        private string GetMimeType(string filePath)
         {
-            return MimeGuesser.GuessMimeType(fileName);
+            return MimeGuesser.GuessMimeType(filePath);
         }
 
 
