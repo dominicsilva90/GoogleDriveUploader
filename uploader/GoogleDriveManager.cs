@@ -65,7 +65,7 @@ namespace uploader
                     return request.ResponseBody;
 
                 }
-                catch (Exception e)
+                catch
                 {
                     return new Google.Apis.Drive.v3.Data.File();
                 }
