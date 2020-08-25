@@ -22,6 +22,8 @@ namespace uploader
             if (result == DialogResult.OK) // Test result.
             {
                 filePathTxt.Text = openFileDialog1.FileName;
+                resultLabel.ForeColor = Color.Black;
+                resultLabel.Text = "File selected";
             }
         }
 
