@@ -1,6 +1,6 @@
 ﻿namespace uploader
 {
-    partial class Form1
+    partial class MainWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -92,7 +92,7 @@
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(270, 135);
             this.MinimumSize = new System.Drawing.Size(270, 135);
-            this.Name = "Form1";
+            this.Name = "MainWindow";
             this.Text = "EZ Uploader";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -4,11 +4,11 @@ using System.Windows.Forms;
 
 namespace uploader
 {
-    public partial class Form1 : Form
+    public partial class MainWindow : Form
     {
 
         public GoogleDriveManager GoogleDriveManager = new GoogleDriveManager();
-        public Form1()
+        public MainWindow()
         {
             InitializeComponent();
 
