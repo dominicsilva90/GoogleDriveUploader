@@ -21,7 +21,7 @@ namespace uploader
 
             if (result == DialogResult.OK) // Test result.
             {
-                textBox1.Text = openFileDialog1.FileName;
+                filePathTxt.Text = openFileDialog1.FileName;
             }
         }
 
@@ -30,22 +30,25 @@ namespace uploader
             string pageToken = null;
             do
             {
-                var response = GoogleDriveManager.UploadFile(textBox1.Text, "Uploaded from EZUploader");
+                resultLabel.Text = "Uploading...";
+                browseBtn.Enabled = false;
+                var response = GoogleDriveManager.UploadFile(filePathTxt.Text, "Uploaded from EZUploader");
                 resultLabel.ForeColor = Color.ForestGreen;
                 resultLabel.Text = response.Name + " uploaded.";
             }
             while (pageToken != null);
-            textBox1.Clear();
+            filePathTxt.Clear();
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox1.Text))
+            if (string.IsNullOrEmpty(filePathTxt.Text))
             {
-                button2.Enabled = false;
+                uploadBtn.Enabled = false;
+                browseBtn.Enabled = true;
             }
             else
             {
-                button2.Enabled = true;
+                uploadBtn.Enabled = true;
             }
         }
     }

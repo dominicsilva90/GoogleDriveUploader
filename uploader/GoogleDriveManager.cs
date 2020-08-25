@@ -12,10 +12,10 @@ namespace uploader
     {
         private string[] Scopes = { DriveService.Scope.Drive };
         private string ApplicationName = "Quick Uploader";
-        public DriveService service { get; set; }
+        public DriveService Service { get; set; }
         public GoogleDriveManager()
         {
-            service = new DriveService(new BaseClientService.Initializer()
+            Service = new DriveService(new BaseClientService.Initializer()
             {
                 HttpClientInitializer = GetCredentials(),
                 ApplicationName = ApplicationName,
@@ -54,7 +54,7 @@ namespace uploader
                 MemoryStream stream = new MemoryStream(byteArray);
                 try
                 {
-                    FilesResource.CreateMediaUpload request = service.Files.Create(body, stream, mimeType);
+                    FilesResource.CreateMediaUpload request = Service.Files.Create(body, stream, mimeType);
                     request.SupportsTeamDrives = true;
                     request.Upload();
                     return request.ResponseBody;
