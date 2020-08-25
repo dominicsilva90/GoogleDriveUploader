@@ -37,7 +37,7 @@ namespace uploader
             string pageToken = null;
             do
             {
-                var response = GoogleDriveManager.UploadFile(textBox1.Text, "TEST");
+                var response = GoogleDriveManager.UploadFile(textBox1.Text, "Uploaded from EZUploader");
                 resultLabel.ForeColor = Color.ForestGreen;
                 resultLabel.Text = response.Name + " uploaded.";
             }
