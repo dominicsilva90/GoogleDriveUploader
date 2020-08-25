@@ -43,7 +43,7 @@
             this.browseBtn.TabIndex = 0;
             this.browseBtn.Text = "Browse";
             this.browseBtn.UseVisualStyleBackColor = true;
-            this.browseBtn.Click += new System.EventHandler(this.button1_Click);
+            this.browseBtn.Click += new System.EventHandler(this.browseBtn_Click);
             // 
             // openFileDialog1
             // 
@@ -56,7 +56,7 @@
             this.filePathTxt.Name = "filePathTxt";
             this.filePathTxt.Size = new System.Drawing.Size(230, 20);
             this.filePathTxt.TabIndex = 1;
-            this.filePathTxt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.filePathTxt.TextChanged += new System.EventHandler(this.filePathTxt_TextChanged);
             // 
             // uploadBtn
             // 
@@ -67,7 +67,7 @@
             this.uploadBtn.TabIndex = 2;
             this.uploadBtn.Text = "Upload";
             this.uploadBtn.UseVisualStyleBackColor = true;
-            this.uploadBtn.Click += new System.EventHandler(this.button2_Click);
+            this.uploadBtn.Click += new System.EventHandler(this.uploadBtn_Click);
             // 
             // resultLabel
             // 

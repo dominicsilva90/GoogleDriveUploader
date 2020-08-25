@@ -14,7 +14,7 @@ namespace uploader
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void browseBtn_Click(object sender, EventArgs e)
         {
             openFileDialog1.FileName = "";
             DialogResult result = openFileDialog1.ShowDialog();
@@ -27,7 +27,7 @@ namespace uploader
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void uploadBtn_Click(object sender, EventArgs e)
         {
             string pageToken = null;
             do
@@ -41,7 +41,7 @@ namespace uploader
             while (pageToken != null);
             filePathTxt.Clear();
         }
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void filePathTxt_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(filePathTxt.Text))
             {
