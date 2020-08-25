@@ -1,12 +1,5 @@
-﻿using Google.Apis.Auth.OAuth2;
-using Google.Apis.Drive.v3;
-using Google.Apis.Services;
-using Google.Apis.Util.Store;
-using HeyRed.Mime;
-using System;
+﻿using System;
 using System.Drawing;
-using System.IO;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace uploader
